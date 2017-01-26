@@ -12,4 +12,4 @@ TODO: Write a project description
 
 ## Credits
 
-`m-use.zsh-theme` was created from `bira.zsh-theme`
+`m-use.zsh-theme` was created from https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/bira.zsh-theme
