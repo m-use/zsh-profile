@@ -1,1 +1,1 @@
-# zsh-settings
+# zsh-profile
