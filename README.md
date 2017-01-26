@@ -5,12 +5,11 @@ TODO: Write a project description
 ## Installation
 
 ### .zshrc
-Users > baker > .zshrc
+~/.zshrc
 
-## Usage
-
-TODO: Write usage instructions
+### m-use.zsh-theme
+~/.oh-my-zh/themes
 
 ## Credits
 
-TODO: Write credits
+`m-use.zsh-theme` was created from `bira.zsh-theme`
