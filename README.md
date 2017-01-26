@@ -4,11 +4,11 @@ TODO: Write a project description
 
 ## Installation
 
-### .zshrc
-~/.zshrc
+#### .zshrc
+`~/.zshrc`
 
-### m-use.zsh-theme
-~/.oh-my-zh/themes
+#### m-use.zsh-theme
+`~/.oh-my-zh/themes`
 
 ## Credits
 
