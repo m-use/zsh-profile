@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:ZSH Profile}
+# ZSH Profile
 
 TODO: Write a project description
 
@@ -15,6 +13,3 @@ TODO: Write usage instructions
 ## Credits
 
 TODO: Write credits
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
