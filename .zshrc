@@ -98,8 +98,9 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/hom
 
 # Aliases
 alias aemlauncher='cd /Applications/cq-6.1 && java -jar cq-quickstart-6.1.0.jar'
-alias zshconfig='sublime ~/.zshrc'
+alias zshconfig='subl ~/.zshrc'
 alias sublime='open -a "Sublime Text"'
+alias subl='open -a "Sublime Text"'
 alias ip='ifconfig | grep inet'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
