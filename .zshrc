@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 
-export ZSH=/Users/lbaker/.oh-my-zsh
+export ZSH=/Users/m-use/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -55,7 +55,11 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/lbaker/.nvm/versions/node/v6.2.0/bin:/usr/local/bin/apache-maven-3.2.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/Users/m-use/.nvm/versions/node/v6.2.0/bin:/usr/local/bin/apache-maven-3.2.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# Acquia dev desktop stuff
+# export PHP_ID=php5_6;
+# export PATH="/Applications/DevDesktop/$PHP_ID/bin:/Applications/DevDesktop/mysql/bin:/Applications/DevDesktop/tools:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -87,24 +91,42 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/sbin:$PATH"
 
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/home"
-
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/home"
 
-# export M2_HOME=/Users/lbaker/apache-maven-3.3.3
-# export M2=$M2_HOME/bin
-# export MAVEN_OPTS=-Xmx4096m
-# export PATH=$M2:$PATH
-
 # Aliases
-alias aemlauncher='cd /Applications/cq-6.1 && java -jar cq-quickstart-6.1.0.jar'
-alias zshconfig='subl ~/.zshrc'
+alias aemlauncher-6.1='cd /Applications/AEM-6.1 && java -jar cq-quickstart-6.1.0.jar'
+alias aemlauncher-6.2='cd /Applications/AEM-6.2 && java -jar cq-quickstart-6.2.0.jar'
+alias aemlauncher-6.3='cd /Applications/AEM-6.3 && java -jar cq-quickstart-6.3.0.jar'
+alias aemlauncher-6.5='cd /Applications/AEM-6.5 && java -jar AEM_6.5_Quickstart.jar'
+alias gcmvn='gulp compile && mvn -PautoInstallPackage clean install'
+alias zshconfig='vs ~/.zshrc'
+alias slateconfig='subl ~/.slate'
 alias sublime='open -a "Sublime Text"'
 alias subl='open -a "Sublime Text"'
+alias vs='open -a "Visual Studio Code"'
 alias ip='ifconfig | grep inet'
+
+# Key Bindings
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
+
+# Functions
+function gclone () {
+	reponame=${1##*/}
+  reponame=${reponame%.git}
+  git clone "$1" "$reponame";
+  cd "$reponame";
+}
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM$
-export NVM_DIR="/Users/lbaker/.nvm"
+export NVM_DIR="/Users/m-use/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# drupal - phpstorm
+if [ -f "/Applications/DevDesktop/apache/logs/error_log" ]; then
+ alias phplog='tail -f /Applications/DevDesktop/apache/logs/error_log'
+fi
